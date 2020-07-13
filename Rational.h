@@ -10,14 +10,14 @@ private:
 	int denominator;
 
 public:
-	Rational();
+	Rational(); // constructor
 
-	void setRational();
-	void autosetRational(int, int);
-	void getReducedRational();
-	std::string toRationalString();
+	void setRational(); // constructor which askes the user to put numbers
+	void autosetRational(int, int); // constructor with already existing numbers
+	void getReducedRational(); // Searching for the GCD to reduce the fraction and reduce the fraction if it is possible
+	std::string toRationalString(); // Output the reduced fraction, if it is an integer, it will output the integer
 
-	void getcommunDenominator(Rational&, Rational&);
+	void getcommunDenominator(Rational&, Rational&); // multiply the fraction with both denominators to have a commun denominator
 	void add(Rational, Rational);
 	void substract(Rational, Rational);
 	void multiply(Rational, Rational);
