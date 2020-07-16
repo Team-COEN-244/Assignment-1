@@ -1,3 +1,5 @@
+//Header file for rational 
+
 #ifndef RATIONAL_HEADER
 #define RATIONAL_HEADER
 
