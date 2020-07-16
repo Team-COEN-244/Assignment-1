@@ -12,7 +12,7 @@ int main()
 	std::cout << "This program will take 2 fractions you choose and make differents calculations with it. " 
 		<< std::endl << "The program will end until you enter 'stop' ." << std::endl << "Have fun !"
 		<< std::endl << "Do you want to make funny calculations with my program ?";
-	do
+	do //the do loop finds if the fraction is applicable to continue using if else statements
 	{
 		std::cin >> stopper;
 		if (stopper != "no")
