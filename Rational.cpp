@@ -8,7 +8,7 @@ Rational::Rational()
 	denominator = 2;
 }
 
-// function 
+// function for user input to enter a certain rational number
 void Rational::setRational()
 {
 	std::cout << std::endl << "Please enter an integer as the numerator: ";
@@ -16,7 +16,7 @@ void Rational::setRational()
 	std::cout << "Please enter an integer as the denominator: ";
 	std::cin >> denominator;
 }
-
+// function 
 void Rational::autosetRational(int num, int den)
 {
 	numerator = num;
