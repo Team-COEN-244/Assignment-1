@@ -1,4 +1,4 @@
-// Mélina Deneuve ID#40153103
+// MÃ©lina Deneuve ID#40153103
 // Rudy 
 // Assignment 1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
@@ -8,8 +8,8 @@
 int main()
 {
 	std::string stopper;
-	bool wrong{ false };
-	std::cout << "This program will take 2 fractions you choose and make differents calculations with it. "
+	bool wrong{ false };  
+	std::cout << "This program will take 2 fractions you choose and make differents calculations with it. " 
 		<< std::endl << "The program will end until you enter 'stop' ." << std::endl << "Have fun !"
 		<< std::endl << "Do you want to make funny calculations with my program ?";
 	do
@@ -39,22 +39,24 @@ int main()
 		return 0;
 	}
 	else
-	{
-		while (stopper != "stop")
+	{	
+		//all of the functions down below have setters and getters. 
+		//then they are called 
+		while (stopper != "stop")// while loop in order to see if the fraction entered by the user is applicable
 		{
 			Rational Fraction1;
-			Fraction1.setRational();
+			Fraction1.setRational(); 
 			Fraction1.getReducedRational();
 			std::cout << Fraction1.toRationalString();
 
 			Rational Fraction2;
-			Fraction2.setRational();
+			Fraction2.setRational(); 
 			Fraction2.getReducedRational();
 			std::cout << Fraction2.toRationalString();
 
 			Rational ResultFraction;
 
-			ResultFraction.add(Fraction1, Fraction2);
+			ResultFraction.add(Fraction1, Fraction2); 
 			std::cout << ResultFraction.toRationalString();
 			std::cout << ResultFraction.toDouble();
 
