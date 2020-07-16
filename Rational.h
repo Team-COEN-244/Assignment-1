@@ -18,10 +18,10 @@ public:
 	std::string toRationalString(); // Output the reduced fraction, if it is an integer, it will output the integer
 
 	void getcommunDenominator(Rational&, Rational&); // multiply the fraction with both denominators to have a commun denominator
-	void add(Rational, Rational);
-	void substract(Rational, Rational);
-	void multiply(Rational, Rational);
-	void divide(Rational, Rational);
+	void add(Rational, Rational); // adding rational numbers 
+	void substract(Rational, Rational); // substracting rational numbers 
+	void multiply(Rational, Rational); // multiplying rational numbers
+	void divide(Rational, Rational); // dividing rational numbers 
 	
 	double toDouble();
 };
