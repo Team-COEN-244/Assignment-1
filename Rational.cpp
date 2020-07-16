@@ -1,13 +1,14 @@
 #include "Rational.h"
 #include <iostream>
 
-
+// Constructor class
 Rational::Rational()
 {
 	numerator = 1;
 	denominator = 2;
 }
 
+// function 
 void Rational::setRational()
 {
 	std::cout << std::endl << "Please enter an integer as the numerator: ";
