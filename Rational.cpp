@@ -22,7 +22,7 @@ void Rational::autosetRational(int num, int den)
 	numerator = num;
 	denominator = den;
 }
-// function that 
+// function that searches for the GCD to reduce the fraction and reduce the fraction if it is possible
 void Rational:: getReducedRational()
 {
 	int rest, num{ numerator }, den{ denominator };
