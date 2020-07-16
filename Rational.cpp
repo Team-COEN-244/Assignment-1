@@ -16,13 +16,13 @@ void Rational::setRational()
 	std::cout << "Please enter an integer as the denominator: ";
 	std::cin >> denominator;
 }
-// function 
+// function which enters these numbers into the position that it is intended to (numerator or denominator)
 void Rational::autosetRational(int num, int den)
 {
 	numerator = num;
 	denominator = den;
 }
-
+// function that 
 void Rational:: getReducedRational()
 {
 	int rest, num{ numerator }, den{ denominator };
