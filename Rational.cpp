@@ -36,7 +36,7 @@ void Rational:: getReducedRational()
 	numerator = numerator / den;
 	denominator = denominator / den;
 }
-
+// outputs the reduced fraction, if it is an integer, it will output the integer
 std::string Rational::toRationalString()
 {
 	std::string RationalString;
@@ -69,7 +69,7 @@ std::string Rational::toRationalString()
 	}
 	return RationalString;
 }
-
+// 
 void Rational::getcommunDenominator(Rational& Fraction1, Rational& Fraction2)
 {
 	if (Fraction1.denominator != Fraction2.denominator)
