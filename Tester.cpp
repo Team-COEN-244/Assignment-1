@@ -5,10 +5,10 @@ using namespace std;
 int main() {
     
     Rational FractionTest1;
-    FractionTest1.autosetRational(1, 3);
+    FractionTest1.autosetRational(-1, 3);
 
     Rational FractionTest2;
-    FractionTest2.autosetRational(7, 8);
+    FractionTest2.autosetRational(-7, -8);
 
     Rational addition;
     addition.add(FractionTest1, FractionTest2);
