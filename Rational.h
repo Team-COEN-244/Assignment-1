@@ -14,8 +14,8 @@ private:
 public:
 	Rational(); // constructor
 
-	void setRational(); // function which asks the user to put numbers
-	void autosetRational(int, int); // function with already existing numbers
+	void setRational(); // Constructor function which asks the user to put numbers
+	void autosetRational(int, int); // Constructor function with already existing numbers
 	void getReducedRational(); // Searching for the GCD to reduce the fraction and reduce the fraction if it is possible
 	std::string toRationalString(); // Output the reduced fraction, if it is an integer, it will output the integer
 
