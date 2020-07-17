@@ -19,10 +19,10 @@ int main() {
     Rational mutiplication; 
     mutiplication.multiply(FractionTest1, FractionTest2);
 
-    cout << FractionTest1.toRationalString() << " + " << FractionTest2.toRationalString() << " = " << addition.toRationalString() << " = " << addition.toDouble() << endl;
-    cout << FractionTest1.toRationalString() << " - " << FractionTest2.toRationalString() << " = " << subtraction.toRationalString() << " = " << subtraction.toDouble() << endl;
-    cout << FractionTest1.toRationalString() << " * " << FractionTest2.toRationalString() << " = " << mutiplication.toRationalString() << " = " << mutiplication.toDouble() << endl;
-    cout << FractionTest1.toRationalString() << " % " << FractionTest2.toRationalString() << " = " << division.toRationalString() << " = " << division.toDouble() << endl;
+    cout << FractionTest1.toRationalString() << " + " << FractionTest2.toRationalString() << " = " << addition.toRationalString()  << addition.toDouble() << endl;
+    cout << FractionTest1.toRationalString() << " - " << FractionTest2.toRationalString() << " = " << subtraction.toRationalString()  << subtraction.toDouble() << endl;
+    cout << FractionTest1.toRationalString() << " * " << FractionTest2.toRationalString() << " = " << mutiplication.toRationalString()  << mutiplication.toDouble() << endl;
+    cout << FractionTest1.toRationalString() << " % " << FractionTest2.toRationalString() << " = " << division.toRationalString()  << division.toDouble() << endl;
 
 
 
