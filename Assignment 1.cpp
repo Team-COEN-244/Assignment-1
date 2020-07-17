@@ -12,7 +12,7 @@ int main()
 	std::cout << "This program will take 2 fractions you choose and make differents calculations with it. " 
 		<< std::endl << "The program will end until you enter 'stop' ." << std::endl << "Have fun !"
 		<< std::endl << "Do you want to make funny calculations with my program ?";
-	do //the do loop finds if the fraction is applicable to continue using if else statements
+	do //the do loop is a condition for the user to end or begin the program - like a welcome message
 	{
 		std::cin >> stopper;
 		if (stopper != "no")
@@ -42,33 +42,33 @@ int main()
 	{	
 		//all of the functions down below have setters and getters. 
 		//then they are called 
-		while (stopper != "stop")// while loop in order to see if the fraction entered by the user is applicable
+		while (stopper != "stop")// while loop in order to continue the program until the user does not write "stop"
 		{
-			Rational Fraction1;
-			Fraction1.setRational(); 
+			Rational Fraction1; // Fraction 1 is created
+			Fraction1.setRational(); // Asking the user to put the numbers for creating the rational number
 			Fraction1.getReducedRational();
-			std::cout << Fraction1.toRationalString();
+			std::cout << Fraction1.toRationalString(); // The Fraction 1 will be printed as a reduced fraction
 
-			Rational Fraction2;
+			Rational Fraction2; // Fraction 2 is created
 			Fraction2.setRational(); 
 			Fraction2.getReducedRational();
 			std::cout << Fraction2.toRationalString();
 
-			Rational ResultFraction;
+			Rational ResultFraction; // ResultFraction is created and all the calculation results will be stocked in this value
 
-			ResultFraction.add(Fraction1, Fraction2); 
+			ResultFraction.add(Fraction1, Fraction2); // Addition of Fraction 1 and Fraction 2
+			std::cout << ResultFraction.toRationalString(); // The result will be printed as reduced form (a number if it is an integer)
+			std::cout << ResultFraction.toDouble(); // The result will be printed as a number with a coma and many decimals
+
+			ResultFraction.substract(Fraction1, Fraction2);	// Substraction of Fraction 1 and Fraction 2
 			std::cout << ResultFraction.toRationalString();
 			std::cout << ResultFraction.toDouble();
 
-			ResultFraction.substract(Fraction1, Fraction2);
+			ResultFraction.multiply(Fraction1, Fraction2); // Multiplication of Fraction 1 and Fraction 2
 			std::cout << ResultFraction.toRationalString();
 			std::cout << ResultFraction.toDouble();
 
-			ResultFraction.multiply(Fraction1, Fraction2);
-			std::cout << ResultFraction.toRationalString();
-			std::cout << ResultFraction.toDouble();
-
-			ResultFraction.divide(Fraction1, Fraction2);
+			ResultFraction.divide(Fraction1, Fraction2); // Division of Fraction 1 and Fraction 2
 			std::cout << ResultFraction.toRationalString();
 			std::cout << ResultFraction.toDouble();
 
