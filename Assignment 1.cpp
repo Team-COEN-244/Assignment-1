@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
 // Mélina Deneuve ID#40153103
 // Rudy Zoghaib   ID#40025399
-=======
-// M�lina Deneuve ID#40153103
-// Rudy Zoghaib	  ID#40025399
->>>>>>> Stashed changes
 // Assignment 1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 #include <iostream>
