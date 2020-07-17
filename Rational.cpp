@@ -8,21 +8,26 @@ Rational::Rational()
 	denominator = 2;
 }
 
-// function for user input to enter a certain rational number
+// Function asking the user to enter a certain rational number
 void Rational::setRational()
 {
 	std::cout << std::endl << "Please enter an integer as the numerator: ";
 	std::cin >> numerator;
 	std::cout << "Please enter an integer as the denominator: ";
 	std::cin >> denominator;
+	while (denominator == 0)
+	{
+		std::cout<<"Please 0 is not acceptable for a denominator, enter an other number";
+		std::cin>>denominator;
+	}
 }
-// function which enters these numbers into the position that it is intended to (numerator or denominator)
+// Function which enters these numbers into the position that it is intended to (numerator or denominator)
 void Rational::autosetRational(int num, int den)
 {
 	numerator = num;
 	denominator = den;
 }
-// function that searches for the GCD to reduce the fraction and reduce the fraction if it is possible
+// Function that searches for rest of divisions to reduce the fraction
 void Rational:: getReducedRational()
 {
 	int rest, num{ numerator }, den{ denominator };
@@ -44,7 +49,7 @@ std::string Rational::toRationalString()
 
 	negative = "- ";
 	slash = " / ";
-	if (denominator == 1)
+	if (denominator == 1) // It verifies that the numerator or denominator or both are negative or positive 
 		RationalString = std::to_string(numerator);
 	else
 	{
@@ -52,25 +57,25 @@ std::string Rational::toRationalString()
 		{
 			num = std::to_string(abs(numerator));
 			den = std::to_string(abs(denominator));
-			RationalString = negative + num + slash + den;
+			RationalString = negative + num + slash + den; // Then it prints out the result as a negative result
 		}
 		else if (numerator < 0 && denominator < 0)
 		{
 			num = std::to_string(abs(numerator));
 			den = std::to_string(abs(denominator));
-			RationalString = num + slash + den;
+			RationalString = num + slash + den; // It prints out as a positive result (in case of 2 negative integers ad num and den)
 		}
 		else
 		{
 			num = std::to_string(numerator);
 			den = std::to_string(denominator);
-			RationalString = num + slash + den;
+			RationalString = num + slash + den; // nothing is changed when both integers are positive
 		}
 	}
 	return RationalString;
 }
-// 
-void Rational::getcommunDenominator(Rational& Fraction1, Rational& Fraction2)
+// The function multiplies both fraction with the other's denominator to get a commun denominator, to be able to add / substract
+void Rational::getcommunDenominator(Rational& Fraction1, Rational& Fraction2) 
 {
 	if (Fraction1.denominator != Fraction2.denominator)
 	{
@@ -80,7 +85,7 @@ void Rational::getcommunDenominator(Rational& Fraction1, Rational& Fraction2)
 		Fraction2.denominator = Fraction1.denominator;
 	}
 }
-
+// addition is easier with both denominator as equal
 void Rational::add(Rational Fraction1, Rational Fraction2)
 {
 	int result_numerator, result_denominator;
@@ -93,7 +98,7 @@ void Rational::add(Rational Fraction1, Rational Fraction2)
 	std::cout << std::endl << "The addition's result of both rational numbers is: ";
 	getReducedRational();
 }
-
+// substraction is doable when both denominators are equal
 void Rational:: substract(Rational Fraction1, Rational Fraction2)
 {
 	int result_numerator, result_denominator;
@@ -118,7 +123,7 @@ void Rational:: multiply(Rational Fraction1, Rational Fraction2)
 	std::cout << std::endl << "The multiplication's result of both rational numbers is: ";
 	getReducedRational();
 }
-
+// This function does not divides, but multiplies Fraction 1 with the inverse of the Fraction 2
 void Rational::divide(Rational Fraction1, Rational Fraction2)
 {
 	int result_numerator, result_denominator;
@@ -130,7 +135,7 @@ void Rational::divide(Rational Fraction1, Rational Fraction2)
 	std::cout << std::endl << "The division's result of both rational numbers is: ";
 	getReducedRational();
 }
-
+// Output of the number as a double
 double Rational::toDouble()
 {
 	double result{ 0 };
